@@ -174,10 +174,16 @@ let output = (hundreds + ' ' + dozens);
 let newOutput = '';
 if (number <= 99) {
 let l = output.length;
-for (i = 1; i <= l - 1; i++) {
-    newOutput = newOutput + output[i];
-}
+    for (i = 1; i <= l - 1; i++) {
+        newOutput = newOutput + output[i];
+    }
 output = newOutput;
+}
+else {
+    output = output;
+}
+if (number = 0) {
+    output = 'zero';
 }
 return output;
 }
