@@ -41,64 +41,64 @@ switch (hundredsNum) {
 if (ost <= 20) {
     switch (ost) {
     case 1:
-        dozens = 'one';
+        dozens = ' one';
         break;
     case 2:
-        dozens = 'two';
+        dozens = ' two';
         break;
     case 3:
-        dozens = 'three';
+        dozens = ' three';
         break;
     case 4:
-        dozens = 'four';
+        dozens = ' four';
         break;
     case 5:
-        dozens = 'five';
+        dozens = ' five';
         break;
     case 6:
-        dozens = 'six';
+        dozens = ' six';
         break;
     case 7:
-        dozens = 'seven';
+        dozens = ' seven';
         break;
     case 8:
-        dozens = 'eight';
+        dozens = ' eight';
         break;
     case 9:
-        dozens = 'nine';
+        dozens = ' nine';
         break;
     case 10:
-        dozens = 'ten';
+        dozens = ' ten';
         break;
     case 11:
-        dozens = 'eleven';
+        dozens = ' eleven';
         break;
     case 12:
-        dozens = 'twelve';
+        dozens = ' twelve';
         break;
     case 13:
-        dozens = 'thirteen';
+        dozens = ' thirteen';
         break;
     case 14:
-        dozens = 'fourteen';
+        dozens = ' fourteen';
         break;
     case 15:
-        dozens = 'fiveteen';
+        dozens = ' fifteen';
         break;
     case 16:
-        dozens = 'sixteen';
+        dozens = ' sixteen';
         break;
     case 17:
-        dozens = 'seventeen';
+        dozens = ' seventeen';
         break;
     case 18:
-        dozens = 'eighteen';
+        dozens = ' eighteen';
         break;
     case 19:
-        dozens = 'nineteen';
+        dozens = ' nineteen';
         break;
     case 20:
-        dozens = 'twenty';
+        dozens = ' twenty';
         break;
     default:
         dozens = '';
@@ -113,28 +113,28 @@ else if (ost > 20 && ost <= 99) {
         dozens = dozens + ' one';
         break;
         case '2':
-        dozens = dozens + 'two';
+        dozens = dozens + ' two';
         break;
         case '3':
-        dozens = dozens + 'three';
+        dozens = dozens + ' three';
         break;
         case '4':
-        dozens = dozens + 'four';
+        dozens = dozens + ' four';
         break;
         case '5':
-        dozens = dozens + 'five';
+        dozens = dozens + ' five';
         break;
         case '6':
-        dozens = dozens + 'six';
+        dozens = dozens + ' six';
         break;
         case '7':
-        dozens = dozens + 'seven';
+        dozens = dozens + ' seven';
         break;
         case '8':
-        dozens = dozens + 'eight';
+        dozens = dozens + ' eight';
         break;
         case '9':
-        dozens = dozens + 'nine';
+        dozens = dozens + ' nine';
         break;
     }
     switch (nOst[0]) {
@@ -142,47 +142,54 @@ else if (ost > 20 && ost <= 99) {
         dozens = dozens;
         break;
         case '2':
-        dozens = 'twenty ' + dozens;
+        dozens = ' twenty' + dozens;
         break;
         case '3':
-        dozens = 'thirty ' + dozens;
+        dozens = ' thirty' + dozens;
         break;
         case '4':
-        dozens = 'fourty ' + dozens;
+        dozens = ' forty' + dozens;
         break;
         case '5':
-        dozens = 'fivety ' + dozens;
+        dozens = ' fifty' + dozens;
         break;
         case '6':
-        dozens = 'sixty ' + dozens;
+        dozens = ' sixty' + dozens;
         break;
         case '7':
-        dozens = 'seventy ' + dozens;
+        dozens = ' seventy' + dozens;
         break;
         case '8':
-        dozens = 'eighty ' + dozens;
+        dozens = ' eighty' + dozens;
         break;
         case '9':
-        dozens = 'ninety ' + dozens;
+        dozens = ' ninety' + dozens;
         break;
         default:
         dozens = dozens;
 
     }
 }
-let output = (hundreds + ' ' + dozens);
+let output = (hundreds + dozens);
 let newOutput = '';
-if (number <= 99) {
 let l = output.length;
+if (number <= 99) {
+
     for (i = 1; i <= l - 1; i++) {
         newOutput = newOutput + output[i];
     }
 output = newOutput;
 }
+else if (output[l - 1] === ' ') {
+    for (i = 0; i < l - 1; i++) {
+        newOutput = newOutput + output[i];
+    }
+    output = output;
+}
 else {
     output = output;
 }
-if (number = 0) {
+if (number === 0) {
     output = 'zero';
 }
 return output;
